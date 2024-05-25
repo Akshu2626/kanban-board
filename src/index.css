@@ -51,6 +51,8 @@ body {
   border-radius: 12px;
   cursor: grab;
   background-color: rgb(56, 55, 55);
+  display: flex;
+  justify-content: space-between;
 }
 
 .dropIndicator {
@@ -87,11 +89,17 @@ button {
 
 .deletbtn {
   display: none;
+  
+  align-items: center;
+  justify-content: center;
+  
 }
 
 @media (max-width: 780px) {
   .deletbtn {
-    display: block;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
   }
   .burnDarry {
     display: none;

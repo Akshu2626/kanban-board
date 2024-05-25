@@ -1,6 +1,6 @@
 import React from "react";
 import DropIndicator from "./DropIndicator";
-import { FaRecycle } from "react-icons/fa";
+import { MdDelete } from "react-icons/md";
 
 const Card = ({ title, id, column, handleDragStart, setCards, idx }) => {
   const delethandler = (e) => {
@@ -16,7 +16,7 @@ const Card = ({ title, id, column, handleDragStart, setCards, idx }) => {
       >
         <h4> {title} </h4>
         <button className="deletbtn" onClick={delethandler}>
-            <FaRecycle/>
+            <MdDelete/>
         </button>
       </div>
     </>

@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { FcCancel } from "react-icons/fc";
+import { MdCancel } from "react-icons/md";
 import { TbFlagCancel } from "react-icons/tb";
 
 const Addcard = ({ column, setCards }) => {
@@ -29,7 +31,7 @@ const Addcard = ({ column, setCards }) => {
           />
           <div className="btn">
           <button onClick={() => setAdding(false)}>
-            <TbFlagCancel/>
+             Cancle <MdCancel/>
           </button>
           <button>Add +</button>
           </div>
