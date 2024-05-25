@@ -39,22 +39,28 @@ const Column = ({ title, headingColor, column, cards, setCards }) => {
       <div className="column-heading">
         <h3>{title}</h3>
         <span>{filteredCards.length} </span>
-        
       </div>
       <div
-      className="column-inner"
+        className="column-inner"
         style={{
           height: "95%",
           width: "100%",
           backgroundColor: `${active ? "grey" : "black"}`,
-            
         }}
         onDragOver={handleDragOver}
         onDragLeave={hadnleDragLeave}
         onDrop={handleDragEnd}
       >
-        {filteredCards.map((e) => {
-          return <Card key={e.id} {...e} handleDragStart={handleDragStart} />;
+        {filteredCards.map((e,idx) => {
+          return (
+            <Card
+              key={e.id}
+              {...e}
+              handleDragStart={handleDragStart}
+              setCards={setCards}
+              idx={idx}
+            />
+          );
         })}
         <DropIndicator beforeId={"-1"} column={column} />
         <Addcard column={column} setCards={setCards} />

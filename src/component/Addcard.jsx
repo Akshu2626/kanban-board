@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { TbFlagCancel } from "react-icons/tb";
 
 const Addcard = ({ column, setCards }) => {
   const [text, setText] = useState("");
@@ -27,7 +28,9 @@ const Addcard = ({ column, setCards }) => {
             style={{ width: "100%" }}
           />
           <div className="btn">
-          <button onClick={() => setAdding(false)}>Close</button>
+          <button onClick={() => setAdding(false)}>
+            <TbFlagCancel/>
+          </button>
           <button>Add +</button>
           </div>
         </form>

@@ -25,7 +25,9 @@ const BurnDarry = ({ setCards }) => {
         border: `${active ? "5px solid yellow" : "5px solid grey"}`,
         backgroundColor: `${active ? "red" : "grey"}`,
       }}
-    ></div>
+    >
+        Drag an Delete
+    </div>
   );
 };
 
